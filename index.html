@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Ephesis&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ysabeau+SC:wght@1..1000&display=swap"
       rel="stylesheet"
     />
     <!-- Bootstrap CSS -->
@@ -21,10 +21,11 @@
     <title>My Portfolio</title>
   </head>
   <body>
+    <div class="mouseef dark-reverse-bg"></div>
+    <div class="outline"></div>
     <!-- Header -->
-
     <nav class="navbar navbar-expand-lg navbar-light dark-bg" id="navbar">
-      <h5 class="name-font dark">Mark Angelo Oreña</h5>
+      <h5 class="name-font neon">Mark Angelo</h5>
       <button
         class="navbar-toggler"
         type="button"
@@ -40,7 +41,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link selected" href="#">Home</a>
+            <a class="nav-link selected" href="#landing-page">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link dark" href="#">About</a>
@@ -61,21 +62,19 @@
     </nav>
     <!-- end of header -->
     <section id="landing-page" class="dark-bg">
-      <div class="container">
+      <div class="container hidden">
         <img src="../img/me.png" alt="Mark Angelo Oreña" />
-        <div class="box">
+        <div class="box hidden">
           <div class="sub-box">
             <div class="text-container">
-              <h5 class="dark">Hey there!</h5>
+              <h5 class="dark">hey there! i am</h5>
 
-              <h1 class="neon">I am Mark Angelo D. Oreña</h1>
-              <h5 class="dark">
-                Graduate of BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY
-              </h5>
+              <h1 class="neon">Mark Angelo D. Oreña</h1>
+              <h5 class="dark center">aspiring to be a System Developer</h5>
             </div>
 
             <div class="arrow-container">
-              <h6 class="dark">Scroll down to know more about me!</h6>
+              <h6 class="grey">scroll down to know more about me!</h6>
               <svg class="arrows">
                 <path class="a1" d="M0 0 L30 32 L60 0"></path>
                 <path class="a2" d="M0 20 L30 52 L60 20"></path>
@@ -86,7 +85,35 @@
         </div>
       </div>
     </section>
-    <section id="landing-page" class="dark-bg"></section>
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p class="hidden">
+          My name is Mark Angelo D. Oreña. I am 23 years old and was born on May
+          24, 2001. I lived in
+          <a href="https://maps.app.goo.gl/8tuboPYpm1UqiktB6"
+            >San Blas, Villasis, Pangasinan</a
+          >. I recently graduated from
+          <a href="https://ucu.edu.ph/">Urdaneta City University</a> with a
+          Bachelor of Science in Information Technology. 
+        </p>
+        <p class="hidden">
+          I am aspiring to become a software engineer. Despite being a fresh
+          graduate, I gained valuable experience in a relevant college
+          internship at
+          <a href="https://www.facebook.com/iPhiTechITandDigitalSolutions/"
+            >iPhiTech IT and Digital Solutions</a
+          >, located in Mabalacat, Pampanga. Additionally, I gained hands-on
+          experience in developing on both web and mobile platforms during our
+          capstone project, "LendChecker: A web and mobile-based loan management
+          system for Almonbevs Lending Corporation, Urdaneta City."
+        </p>
+        <p class="hidden">
+          Knowledge of the following: Flutter, Dart, Firestore, MySQL, HTML,
+          CSS, JavaScript, Wordpress (Elementor & Oxygen), Liquid, and Shopify. 
+        </p>
+      </div>
+    </section>
     <!-- Bootstrap JS and Popper (included in the bundle) -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
