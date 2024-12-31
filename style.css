@@ -1,0 +1,192 @@
+* {
+  /* Reset CSS */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* COLOR PALLETE */
+  --blue: #0f172a;
+  --blue2: rgba(15, 23, 42, 0.753);
+  --neon: #5eead4;
+  --grey: #64748b;
+  --white: #dfe5ef;
+  --light-background: #f5f3ff;
+  /* f5f3ff */
+}
+/* Set fontfamily */
+body {
+  font-family: "Poppins", serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* For light and dark mode */
+.dark {
+  color: white !important;
+}
+.light {
+  color: var(--blue2);
+}
+.dark:hover,
+.light:hover {
+  color: var(--neon) !important;
+}
+.selected {
+  color: var(--neon) !important;
+}
+.dark-bg {
+  background-color: var(--blue);
+}
+.light-bg {
+  background-color: var(--light-background) !important;
+}
+.neon {
+  color: var(--neon) !important;
+}
+/* button for light and dark mode */
+#mode {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+}
+#mode i {
+  background-color: transparent;
+}
+/* End of Light and Dark CSS */
+/* for name */
+.name-font {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+/* Header CSS */
+nav {
+  padding: 0 1rem !important;
+  display: flex;
+  position: fixed !important;
+  width: 100%;
+  z-index: 997;
+}
+nav li {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Initially hide the header */
+.navbar {
+  opacity: 0;
+  transform: translateY(-100%); /* Start off-screen */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for both */
+}
+
+/* When header becomes visible */
+.navbar.visible {
+  opacity: 1;
+  transform: translateY(0);
+  /* Move to its original position */
+}
+#navbarNav {
+  justify-content: end;
+}
+/* Landning page CSS */
+#landing-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+#landing-page .container {
+  display: flex;
+}
+/* Image CSS */
+#landing-page img {
+  border-bottom: 2px #5eead4 solid;
+  width: auto;
+  height: 50%;
+}
+#landing-page .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* arrow svg css */
+.arrow-container {
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+.arrows {
+  width: 60px;
+  height: 80px;
+  margin-top: 20px;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: var(--neon);
+  fill: transparent;
+  stroke-width: 3px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+  object-fit: cover;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes arrow
+
+/*Safari and Chrome*/ {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+  /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+  /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  /* Safari 和 Chrome */
+}
