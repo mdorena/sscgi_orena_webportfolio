@@ -1,19 +1,3 @@
-// // hide and show header
-// addEventListener("scroll", onScoll);
-
-// function onScoll() {
-//   const navheader = document.getElementById("navbar");
-//   if (window.scrollY == 0) {
-//     // if (window.scrollY <= 100) {
-//     // navheader.style.display = 'none'
-//     navheader.style.display = "none";
-//   } else {
-//     // navheader.style.display = 'flex'
-//     console.log("Scroll");
-//     navheader.style.display = "flex";
-//     console.log(navheader.style.display);
-//   }
-// }
 // hide and show header
 addEventListener("scroll", onScoll);
 
@@ -123,3 +107,57 @@ document.body,
       }
     );
   });
+// CHeck if the section is visible
+function isElementVisible(element) {
+  const elementTop = element.offsetTop;
+  const elementBottom = elementTop + element.offsetHeight;
+  const viewportTop = window.pageYOffset;
+  const viewportBottom = viewportTop + window.innerHeight - 200;
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+}
+
+const home = document.getElementById("landing-page");
+const about = document.getElementById("about");
+const certificates = document.getElementById("certificates");
+const experience = document.getElementById("experience");
+const contact = document.getElementById("contact");
+const nav_home = document.getElementById("nav-1");
+const nav_about = document.getElementById("nav-2");
+const nav_certificates = document.getElementById("nav-3");
+const nav_experience = document.getElementById("nav-4");
+const nav_contact = document.getElementById("nav-5");
+// adding and removing selected class when its in viewpoint
+window.addEventListener("scroll", () => {
+  if (isElementVisible(contact)) {
+    nav_contact.classList.add("selected");
+    nav_home.classList.remove("selected");
+    nav_about.classList.remove("selected");
+    nav_certificates.classList.remove("selected");
+    nav_contact.classList.remove("selected");
+  } else if (isElementVisible(certificates)) {
+    nav_certificates.classList.add("selected");
+    nav_home.classList.remove("selected");
+    nav_about.classList.remove("selected");
+    nav_experience.classList.remove("selected");
+    nav_contact.classList.remove("selected");
+  } else if (isElementVisible(experience)) {
+    nav_experience.classList.add("selected");
+    nav_home.classList.remove("selected");
+    nav_about.classList.remove("selected");
+    nav_certificates.classList.remove("selected");
+    nav_contact.classList.remove("selected");
+  } else if (isElementVisible(about)) {
+    nav_about.classList.add("selected");
+    nav_home.classList.remove("selected");
+    nav_experience.classList.remove("selected");
+    nav_certificates.classList.remove("selected");
+    nav_contact.classList.remove("selected");
+  } else if (isElementVisible(home)) {
+    nav_home.classList.add("selected");
+    nav_about.classList.remove("selected");
+    nav_experience.classList.remove("selected");
+    nav_certificates.classList.remove("selected");
+    nav_contact.classList.remove("selected");
+  }
+});
