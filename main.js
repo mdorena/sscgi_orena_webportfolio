@@ -26,7 +26,16 @@ buttonMode.addEventListener("click", function () {
   const darkReverseBgClasses = document.querySelectorAll(".dark-reverse-bg");
   const darkClasses = document.querySelectorAll(".dark");
   const iconMode = document.getElementById("icon-mode");
+  const star1 = document.getElementById("stars1");
+  const star2 = document.getElementById("stars2");
+  const star3 = document.getElementById("stars3");
   if (darkClasses.length == 0) {
+    star1.classList.remove("stars-light1");
+    star2.classList.remove("stars-light2");
+    star3.classList.remove("stars-light3");
+    star1.classList.add("stars1");
+    star2.classList.add("stars2");
+    star3.classList.add("stars3");
     iconMode.classList.remove("fa-moon");
     iconMode.classList.add("fa-sun");
     for (var i = 0; i < lightClasses.length; i++) {
@@ -48,6 +57,13 @@ buttonMode.addEventListener("click", function () {
       lightReverseBgClasses[i].classList.add("dark-reverse-bg");
     }
   } else {
+    star1.classList.remove("stars1");
+    star2.classList.remove("stars2");
+    star3.classList.remove("stars3");
+    star1.classList.add("stars-light1");
+    star2.classList.add("stars-light2");
+    star3.classList.add("stars-light3");
+
     iconMode.classList.remove("fa-sun");
     iconMode.classList.add("fa-moon");
     for (var i = 0; i < darkClasses.length; i++) {
