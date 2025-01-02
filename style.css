@@ -48,9 +48,13 @@ body {
 .grey {
   color: var(--grey);
 }
-.dark:hover,
-.light:hover {
+.dark:hover {
   color: var(--neon) !important;
+  font-weight: 600;
+}
+.light:hover {
+  color: var(--blue);
+  font-weight: 600;
 }
 .selected {
   color: var(--neon) !important;
@@ -69,6 +73,9 @@ body {
 }
 .neon {
   color: var(--neon) !important;
+}
+.paging {
+  color: #0f172a;
 }
 
 /* button for light and dark mode */
