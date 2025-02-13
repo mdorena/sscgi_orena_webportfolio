@@ -24,6 +24,8 @@ buttonMode.addEventListener("click", function () {
   const darkBgClasses = document.querySelectorAll(".dark-bg");
   const lightReverseBgClasses = document.querySelectorAll(".light-reverse-bg");
   const darkReverseBgClasses = document.querySelectorAll(".dark-reverse-bg");
+  const neon_light = document.querySelectorAll(".neon-light");
+  const neon_dark = document.querySelectorAll(".neon");
   const darkClasses = document.querySelectorAll(".dark");
   const iconMode = document.getElementById("icon-mode");
   const star1 = document.getElementById("stars1");
@@ -56,6 +58,12 @@ buttonMode.addEventListener("click", function () {
       // Add the "dark" class
       lightReverseBgClasses[i].classList.add("dark-reverse-bg");
     }
+    for (var i = 0; i < neon_light.length; i++) {
+      // Remove the "light" class
+      neon_light[i].classList.remove("neon-light");
+      // Add the "dark" class
+      neon_light[i].classList.add("neon");
+    }
   } else {
     star1.classList.remove("stars1");
     star2.classList.remove("stars2");
@@ -83,6 +91,12 @@ buttonMode.addEventListener("click", function () {
       darkReverseBgClasses[i].classList.remove("dark-reverse-bg");
       // Add the "dark" class
       darkReverseBgClasses[i].classList.add("light-reverse-bg");
+    }
+    for (var i = 0; i < neon_dark.length; i++) {
+      // Remove the "dark" class
+      neon_dark[i].classList.remove("neon");
+      // Add the "light" class
+      neon_dark[i].classList.add("neon-light");
     }
   }
 });
